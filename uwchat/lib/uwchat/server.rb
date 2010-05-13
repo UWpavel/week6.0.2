@@ -69,8 +69,8 @@ class ChatServer < GServer
     end
   end
   
-  # Testing is incoming user already connected
-  # Connections for which are closed wil be clered and user would be allowed to login
+  # Testing if incoming user already connected
+  # Closed connections will be cleared and user would be allowed to login
   def test_user?( user, io )
     if @clients.has_key?( user )
       if @clients[user].closed?
